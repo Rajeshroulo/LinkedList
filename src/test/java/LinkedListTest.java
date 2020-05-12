@@ -23,5 +23,11 @@ public class LinkedListTest {
         Assert.assertEquals(4,linkedList.size());
     }
 
-    
+    @Test
+    public void whenItem_removed_fromLinkedList_shouldReturnData() {
+        LinkedList linkedList=new LinkedList();
+        Comparable data=linkedList.remove(2);
+        Assert.assertEquals(2,data);
+    }
+
 }

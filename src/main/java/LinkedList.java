@@ -47,6 +47,21 @@ public class LinkedList<E extends Comparable<E> > {
         return data;
     }
 
+    public <E extends Comparable<E> > E remove(E data){
+        Node current=head;
+        Node temp=null;
+        if(data==current.data){
+            current=current.next;
+
+        }
+        while(current!=null && current.data!=data){
+            temp=current;
+            current=current.next;
+        }
+        temp.next=current.next;
+
+        return data;
+    }
 
 
 }
