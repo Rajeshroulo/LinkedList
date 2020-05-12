@@ -63,5 +63,13 @@ public class LinkedList<E extends Comparable<E> > {
         return data;
     }
 
-
+    public <E extends Comparable<E> >  int size() {
+        Node current=head;
+        int size=0;
+        while(current!=null){
+            size++;
+            current=current.next;
+        }
+        return size;
+    }
 }

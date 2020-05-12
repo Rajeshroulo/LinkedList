@@ -30,4 +30,10 @@ public class LinkedListTest {
         Assert.assertEquals(2,data);
     }
 
+    @Test
+    public void whenSearchItem_fromLinkedList_shouldReturnsTrue() {
+        LinkedList linkedList=new LinkedList();
+        Assert.assertTrue(linkedList.search(1));
+
+    }
 }
