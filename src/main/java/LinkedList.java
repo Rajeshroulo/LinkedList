@@ -131,5 +131,17 @@ public class LinkedList<E extends Comparable<E> > {
         return pos;
     }
 
+    public <E extends  Comparable<E> >void print(LinkedList linkedList) {
+        Node current = head;
+        while (current != null) {
+            System.out.println(current.data + " ");
+            current = current.next;
+        }
+    }
 
 }
+
+
+
+
+

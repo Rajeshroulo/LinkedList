@@ -62,4 +62,15 @@ public class LinkedListTest {
         Assert.assertEquals(6,pos);
     }
 
+    @Test
+    public void whenReadCsvFile_shouldPassTest() {
+        LinkedList linkedList=new LinkedList();
+        CsvReaderWriter csvReaderWriter=new CsvReaderWriter();
+        List<String[]> linkedLists=csvReaderWriter.readFromCsv();
+        linkedList=csvReaderWriter.loadToLinkedList(linkedLists);
+        linkedList.print(linkedList);
+        linkedList.add(10);
+
+    }
+
 }
