@@ -15,4 +15,13 @@ public class LinkedListTest {
 
     }
 
+    @Test
+    public void whenAddNewItem_shouldReturn_nothing() {
+        LinkedList linkedList=new LinkedList();
+        linkedList.add(1);
+        linkedList.add(2);
+        Assert.assertEquals(4,linkedList.size());
+    }
+
+    
 }

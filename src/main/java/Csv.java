@@ -9,13 +9,13 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CsvReaderWriter {
+public class Csv {
     LinkedList linkedList=new LinkedList();
 
 
     public List<String[]> readFromCsv() {
-        String CSV_Location="data.csv";
-        List<String[]> linkedLists=new ArrayList<>();
+        String CSV_Location = "data.csv";
+        List<String[]> linkedLists = new ArrayList<>();
         try {
             BufferedReader bufferedReader = Files.newBufferedReader(Paths.get(CSV_Location));
             CSVReader csvReader = new CSVReader(bufferedReader);
@@ -24,12 +24,20 @@ public class CsvReaderWriter {
                 linkedLists.add(dataRecords);
 
             }
-         } catch (IOException e) {
-        e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return linkedLists;
     }
-            return  linkedLists;
 
+   public LinkedList loadToLinkedList(List<String[]> linkedLists) {
+        for(String[] str:linkedLists) {
+            for (String ele : str) {
+                linkedList.add(ele);
+            }
+        }
+        return linkedList;
 
-}
+    }
 
 }
