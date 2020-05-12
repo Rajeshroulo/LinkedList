@@ -42,4 +42,13 @@ public class LinkedListTest {
         LinkedList linkedList=new LinkedList();
         Assert.assertFalse(linkedList.isEmpty());
     }
+
+    @Test
+    public void whenLinkedList_addItemAtEnd_shouldReturnData() {
+        LinkedList linkedList=new LinkedList();
+        Assert.assertEquals(6,linkedList.append(6));
+    }
+
+
+
 }

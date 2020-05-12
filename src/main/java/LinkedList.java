@@ -95,5 +95,9 @@ public class LinkedList<E extends Comparable<E> > {
         return head==null;
     }
 
+    public  <E extends Comparable<E> > E append(E data) {
+        add(data);
 
+        return data;
+    }
 }
