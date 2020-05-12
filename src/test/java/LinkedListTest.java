@@ -49,6 +49,10 @@ public class LinkedListTest {
         Assert.assertEquals(6,linkedList.append(6));
     }
 
-
+    @Test
+    public void whenCheckIndex_returns_positionOfData() {
+        LinkedList linkedList=new LinkedList();
+        Assert.assertEquals(4,linkedList.findIndex(1));
+    }
 
 }
