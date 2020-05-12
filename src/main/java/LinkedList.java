@@ -113,6 +113,23 @@ public class LinkedList<E extends Comparable<E> > {
         }
         return index;
     }
+    public  <E extends Comparable<E> > int insert(E data, int pos) {
+        try {
+            Node newNode = new Node(data);
+            Node previous = head;
+            int count = 1;
+            while (count < pos - 1) {
+                previous = previous.next;
+                count++;
+            }
+            Node current = previous.next;
+            newNode.next = current;
+            previous.next = newNode;
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+        }
+        return pos;
+    }
 
 
 }

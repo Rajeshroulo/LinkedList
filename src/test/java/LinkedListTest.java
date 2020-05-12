@@ -55,4 +55,11 @@ public class LinkedListTest {
         Assert.assertEquals(4,linkedList.findIndex(1));
     }
 
+    @Test
+    public void whenAddNewItem_atSpecificPos_returnsNothing() {
+        LinkedList linkedList=new LinkedList();
+        Comparable pos=linkedList.insert(8,6);
+        Assert.assertEquals(6,pos);
+    }
+
 }
