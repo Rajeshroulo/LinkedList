@@ -72,4 +72,28 @@ public class LinkedList<E extends Comparable<E> > {
         }
         return size;
     }
+
+    public <E extends Comparable<E> > boolean search(E data) {
+        try {
+            Node current = head;
+            int count = 1;
+            if (data == current.data) {
+                return true;
+            }
+            while (current != null && current.data != data) {
+                current = current.next;
+                count++;
+            }
+        }catch (NullPointerException e){
+            e.printStackTrace();
+        }
+        return true;
+    }
+
+
+    public boolean isEmpty() {
+        return head==null;
+    }
+
+
 }
